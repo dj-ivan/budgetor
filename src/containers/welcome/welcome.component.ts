@@ -13,9 +13,4 @@ public income: number;
   ngOnInit() {
   }
 
-   public addIncome(value: number) {
-     this.income = value;
-     console.log(this.income);
-   }
-
 }

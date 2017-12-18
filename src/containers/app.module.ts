@@ -12,7 +12,7 @@ import { APP_ROUTES } from '../Routes/routes';
 import { BudgetSetupComponent } from './budget-setup/budget-setup.component';
 import { ExpensesComponent } from './budget-setup/expenses/expenses.component';
 import { GoalsComponent } from './goals/goals.component';
-
+import { InputComponent } from '../components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { GoalsComponent } from './goals/goals.component';
     WelcomeComponent,
     BudgetSetupComponent,
     ExpensesComponent,
-    GoalsComponent
+    GoalsComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
