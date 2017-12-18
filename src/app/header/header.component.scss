@@ -1,0 +1,34 @@
+@import '../styles/variabels';
+
+#app-header {
+  /* fix the header to the top of the viewport. */
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index:10;
+
+  /* this should match the min-width in app-container. Recommend setting using a common variable (eg with Sass) */
+  min-width: $min-width;
+
+  /* just arbitrary values */
+  height: 4rem;
+  padding: 1rem;
+
+  /* internal layout, centered vertically - flex layout is great for this */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items:center;
+
+  /* just so we can tell the header apart */
+  background-color: $header-green;
+  color: white;
+}
+
+#app-header h1 {
+  /* set the h1 block as the main flex block - it will fill all unused space in the block */
+  flex: 1;
+
+  /* center content inside the block */
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+@import './styles/variabels';
+
+/* Full height centered app container */
+#app-container {
+ 
+  /* Set block height using the viewport height unit, and force it to be full height, even if the containing content does not require it */
+  min-height: 100vh;
+ 
+  /* center this block for larger viewports */
+  margin: 0 auto;
+ 
+  /*Use max-width for better browser handling of small windows
+  http://www.w3schools.com/css/css_max-width.asp
+  */
+  max-width: 31.25rem;
+ 
+  /* Use min-width to prevent your design from being scrunched up in tiny viewports (and instead be replaced with horizontal scroll bars) 
+  */
+  min-width: $min-width;
+   
+  /* Add padding around your content - this is just an arbitrary number */
+  padding: 1rem;
+ 
+ 
+  /* Add sufficient top padding so the fixed header doesn't cover up main content by defailt.  This value should be a calculated value (eg using calc(), sass, etc):
+  padding for this container + height of app header; Here, that is 1em + 4em */ 
+  padding-top: 5rem;
+ 
+  /* just used to so we can tell the content block apart from the body block */
+  background-color: white;
+}
