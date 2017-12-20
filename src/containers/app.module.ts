@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -13,6 +13,9 @@ import { BudgetSetupComponent } from './budget-setup/budget-setup.component';
 import { ExpensesComponent } from './budget-setup/expenses/expenses.component';
 import { GoalsComponent } from './goals/goals.component';
 import { InputComponent } from '../components/input/input.component';
+import { MatInputModule } from '@angular/material/input';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,12 @@ import { InputComponent } from '../components/input/input.component';
     InputComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(APP_ROUTES, {useHash: true})
+    MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    RouterModule.forRoot(APP_ROUTES, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

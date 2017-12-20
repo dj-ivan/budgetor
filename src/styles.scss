@@ -1,6 +1,4 @@
-/* apply a natural box layout model to all elements, but allowing components to change
-http://www.paulirish.com/2012/box-sizing-border-box-ftw/; 
-*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,body {
   box-sizing: border-box;
