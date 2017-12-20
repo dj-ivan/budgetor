@@ -15,7 +15,9 @@ import { GoalsComponent } from './goals/goals.component';
 import { InputComponent } from '../components/input/input.component';
 import { MatInputModule } from '@angular/material/input';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +29,16 @@ import { environment } from '../environments/environment';
     BudgetSetupComponent,
     ExpensesComponent,
     GoalsComponent,
-    InputComponent
+    InputComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     MatInputModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'budgetor'),
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     RouterModule.forRoot(APP_ROUTES, { useHash: true })
   ],
   providers: [],

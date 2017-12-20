@@ -15,8 +15,5 @@ export class InputComponent implements OnInit {
 
   public getValue(value: number) {
     this.value = value;
-    console.log(this.value);
   }
-
-
 }

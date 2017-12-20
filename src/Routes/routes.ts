@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { WelcomeComponent } from 'containers/welcome/welcome.component';
-import { BudgetSetupComponent } from 'containers/budget-setup/budget-setup.component';
+import { WelcomeComponent } from 'app/welcome/welcome.component';
+import { BudgetSetupComponent } from 'app/budget-setup/budget-setup.component';
 
 
 export const APP_ROUTES: Routes = [
