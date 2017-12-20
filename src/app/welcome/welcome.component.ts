@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-welcome',
@@ -8,13 +9,17 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class WelcomeComponent implements OnInit {
   public income: number;
+  public newUser: AngularFireObject<any>;
 
-  constructor(auth: AngularFireAuth) { }
+  constructor(db: AngularFireDatabase) {
+    this.newUser = db.object('item');
+  }
 
   ngOnInit() {
   }
 
-  public logIn() {
-    
+  public addIncome(amount) {
+    console.log(amount)
+    this.newUser.set({ income: amount });
   }
 }

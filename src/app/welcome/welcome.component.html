@@ -1,17 +1,19 @@
 <div class="welcome-container">
-  <h2 class="title ">
-    CutBack
-  </h2>
-  <span class="line-after-heading"></span>
-  <p class="motto">
-    Create your budget in 4 easy steps.
-  </p>
+  <div class="intro-text-container">
+    <h2 class="title">
+      CutBack
+    </h2>
+    <span class="line-after-heading"></span>
+    <p class="motto">
+      Create your budget in 4 easy steps.
+    </p>
+  </div>
   <div class="income-container">
-    <span class="income-header">Lets begin by noting your monthly income</span>
-    <mat-form-field>
-      <input matInput placeholder="Amount" type="number" class="example-right-align">
+    <mat-form-field class="input-container">
+      <input #income matInput placeholder="Amount" type="number" class="income-input">
       <span matPrefix>$&nbsp;</span>
       <span matSuffix>.00</span>
     </mat-form-field>
+    <span class="done-button"><button mat-mini-fab color="primary" (click)="addIncome(income.value)"><i class="material-icons">done</i></button></span>
   </div>
 </div>

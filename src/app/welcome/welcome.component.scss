@@ -1,31 +1,55 @@
 .welcome-container {
     color: white;
     margin-top: 6rem;
+    margin: 0 auto;
 
-    .title {
-        text-align: center;
-    }
+    .intro-text-container {
+        .title {
+            text-align: center;
+        }
 
-    .motto {
-        text-align: center;
+        .motto {
+            text-align: center;
+        }
+
+        .line-after-heading {
+            content: "";
+            display: block;
+            background-color: #fff;
+            width: 10rem;
+            height: 2px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
     }
 
     .income-container {
-        text-align: center;
-        padding-top: 3rem;
+        width: 50%;
+        margin-left: 15vw;
+        display: flex;
 
-        .income-header {}
-    }
+        .input-container {
+            flex: 1;
 
-    .line-after-heading {
-        content: "";
-        display: block;
-        background-color: #fff;
-        width: 10rem;
-        height: 2px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
+            .income-input {
+                text-align: right;
+            }
+
+            input.income-input::-webkit-outer-spin-button,
+            input.income-input::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            input.income-input {
+                -moz-appearance: textfield;
+            }
+        }
+
+        .done-button {
+            flex: 1;
+            margin: 0.5rem 5vw;
+        }
     }
 }

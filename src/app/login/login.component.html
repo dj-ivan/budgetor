@@ -1,6 +1,14 @@
 <div class="login-container">
-  <app-input class="email-input" label="Email"></app-input>
-  <app-input class="password-input" label="Password"></app-input>
-  <!-- <app-button class="login-button"></app-button>
-    <app-button class="signup-button"></app-button> -->
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [formControl]="password" [type]="hide ? 'password' : 'text'" required>
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+  <div class="button-inner-container">
+    <button *ngIf="showLogIn" mat-raised-button class="login" color="primary" (click)="logIn()">Log In</button>
+    <button mat-raised-button class="signup" color="primary"(click)="logIn()">Sign Up</button>
+  </div>
 </div>

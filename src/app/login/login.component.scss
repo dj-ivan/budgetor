@@ -1,9 +1,13 @@
 .login-container {
-    .email-input {
-        display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .button-inner-container {
+    .login{
+      width: 30%;
     }
-
-    .password-input {
-        display: block;
+    .signup{
+      width: 30%;
     }
+  }
 }
