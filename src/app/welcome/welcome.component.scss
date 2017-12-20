@@ -1,24 +1,31 @@
 .welcome-container {
-  color: white;
-  margin-top: 6rem;
+    color: white;
+    margin-top: 6rem;
 
-  .title {
-      text-align: center;
-  }
+    .title {
+        text-align: center;
+    }
 
-  .motto {
-      text-align: center;
-  }
+    .motto {
+        text-align: center;
+    }
 
-  .line-after-heading {
-      content: "";
-      display: block;
-      background-color: #fff;
-      width: 10rem;
-      height: 2px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-  }
+    .income-container {
+        text-align: center;
+        padding-top: 3rem;
+
+        .income-header {}
+    }
+
+    .line-after-heading {
+        content: "";
+        display: block;
+        background-color: #fff;
+        width: 10rem;
+        height: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
 }
