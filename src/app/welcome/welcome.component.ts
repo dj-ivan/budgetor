@@ -11,15 +11,20 @@ export class WelcomeComponent implements OnInit {
   public income: number;
   public newUser: AngularFireObject<any>;
 
-  constructor(db: AngularFireDatabase) {
-    this.newUser = db.object('item');
+  constructor(public db: AngularFireDatabase) {
+
   }
 
   ngOnInit() {
   }
 
   public addIncome(amount) {
-    console.log(amount)
-    this.newUser.set({ income: amount });
+    // this.db.database.ref('users/' + 1).set({
+    //   username: 'ivan',
+    //   email: 'test',
+    //   income : amount
+    // });
+
+    //this.router.navigate['/budget-setup'];
   }
 }
