@@ -10,7 +10,8 @@
   </div>
   <div class="firstName-container">
     <mat-form-field class="input-container">
-      <input #firstName matInput placeholder="First Name" type="string" class="income-input">
+      <input #firstName matInput placeholder="First Name" type="string" class="income-input"
+      required minlength="4" forbiddenName="bob">
     </mat-form-field>
   </div>
   <div class="lastName-container">
@@ -36,6 +37,6 @@
     </mat-form-field>
   </div>
   <div class="done-container">
-    <span class="done-button"><button mat-mini-fab color="primary" (click)="completeUserSetUp(firstName.value, lastName.value, emailAddress.value, userName.value, income.value)"><i class="material-icons">done</i></button></span>
+    <span class="done-button"><button mat-mini-fab color="primary" (click)="completeUserSetUp(firstName.value, lastName.value, emailAddress.value, userName.value, income.value)" routerLink="/expense-setup"><i class="material-icons">done</i></button></span>
   </div>
 </div>

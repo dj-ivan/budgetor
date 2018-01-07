@@ -14,7 +14,7 @@ export const APP_ROUTES: Routes = [
   // budget setup
   {
     path: 'budget-setup',
-    component: BudgetSetupComponent
+    component: SetupUserComponent
   },
   {
     path: '',
