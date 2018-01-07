@@ -31,7 +31,7 @@ export class SetupUserComponent implements OnInit {
     //this.router.navigate['/budget-setup'];
 
     this.user.firstName = firstName;
-    this.user.lastName = lastName;    
+    this.user.lastName = lastName;
     this.user.email = emailAddress;
     this.user.userName = userName;
     this.user.monthlyIncome = +amount;
