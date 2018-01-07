@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { CacheService } from '../../services/cache.service';
+import { User } from '../../types/user-model';
 
 @Component({
   selector: 'app-welcome',
@@ -8,10 +9,10 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
+  public user: User;
   public income: number;
-  public newUser: AngularFireObject<any>;
 
-  constructor(public db: AngularFireDatabase) {
+  constructor(public cache: CacheService) {
 
   }
 
@@ -19,12 +20,14 @@ export class WelcomeComponent implements OnInit {
   }
 
   public addIncome(amount) {
+    // add income to memory
     // this.db.database.ref('users/' + 1).set({
     //   username: 'ivan',
     //   email: 'test',
     //   income : amount
     // });
 
+    // navigate to step 2 of the budgeting processz
     //this.router.navigate['/budget-setup'];
   }
 }
