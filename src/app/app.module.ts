@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ReactiveFormsModule} from '@angular/forms';
+import { SetupUserComponent } from './budget-setup/setup-user/setup-user.component';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -53,6 +54,7 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import { AuthService } from 'services/auth.service';
+import { CacheService } from 'services/cache.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { AuthService } from 'services/auth.service';
     ExpensesComponent,
     GoalsComponent,
     InputComponent,
-    LoginComponent
+    LoginComponent,
+    SetupUserComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -114,7 +117,7 @@ import { AuthService } from 'services/auth.service';
     MatToolbarModule,
     MatTooltipModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, CacheService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

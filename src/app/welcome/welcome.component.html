@@ -9,11 +9,7 @@
     </p>
   </div>
   <div class="income-container">
-    <mat-form-field class="input-container">
-      <input #income matInput placeholder="Amount" type="number" class="income-input">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
-    <span class="done-button"><button mat-mini-fab color="primary" (click)="addIncome(income.value)"><i class="material-icons">done</i></button></span>
+    <label>Get Started</label>
+    <span class="done-button" ><button mat-mini-fab color="primary" routerLink="/budget-setup"><i class="material-icons">done</i></button></span>
   </div>
 </div>
