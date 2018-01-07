@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExpensesComponent } from './expenses/expenses.component';
-import { DebtsComponent } from './debts/debts.component';
+import { SetupExpensesComponent } from './setup-expenses/setup-expenses.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [ExpensesComponent, DebtsComponent]
+  declarations: [SetupExpensesComponent]
 })
 export class BudgetSetupModule { }
