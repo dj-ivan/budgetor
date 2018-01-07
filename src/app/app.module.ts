@@ -54,6 +54,7 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import { AuthService } from 'services/auth.service';
+import { CacheService } from 'services/cache.service';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,7 @@ import { AuthService } from 'services/auth.service';
     MatToolbarModule,
     MatTooltipModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, CacheService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

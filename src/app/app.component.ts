@@ -6,8 +6,7 @@ import { CacheService } from 'services/cache.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [CacheService]
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor(private router: Router, private _authService: AuthService) {

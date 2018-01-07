@@ -9,7 +9,7 @@ export const APP_ROUTES: Routes = [
   // home route
   {
     path: '',
-    component: SetupUserComponent
+    component: WelcomeComponent
   },
   // budget setup
   {
