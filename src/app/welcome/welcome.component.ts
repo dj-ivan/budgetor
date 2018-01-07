@@ -20,7 +20,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   public addIncome(amount) {
-    // add income to memory
+    // add income to memory 
     // this.db.database.ref('users/' + 1).set({
     //   username: 'ivan',
     //   email: 'test',
