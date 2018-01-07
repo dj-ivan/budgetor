@@ -8,28 +8,24 @@
       Let's start with you and your income.
     </p>
   </div>
-  <div class="income-container">
+  <div class="firstName-container">
     <mat-form-field class="input-container">
       <input #firstName matInput placeholder="First Name" type="string" class="income-input">
-      <span matPrefix>$&nbsp;</span>
     </mat-form-field>
   </div>
-  <div class="income-container">
+  <div class="lastName-container">
     <mat-form-field class="input-container">
       <input #lastName matInput placeholder="Last Name" type="string" class="income-input">
-      <span matPrefix>$&nbsp;</span>
     </mat-form-field>
  </div>
- <div class="income-container">
+ <div class="emailAddress-container">
   <mat-form-field class="input-container">
     <input #emailAddress matInput placeholder="Email Address" type="string" class="income-input">
-    <span matPrefix>$&nbsp;</span>
   </mat-form-field>
 </div>
-  <div class="income-container">
+  <div class="userName-container">
     <mat-form-field class="input-container">
       <input #userName matInput placeholder="User Name" type="string" class="income-input">
-      <span matPrefix>$&nbsp;</span>
     </mat-form-field>
  </div>
   <div class="income-container">
@@ -39,7 +35,7 @@
       <span matSuffix>.00</span>
     </mat-form-field>
   </div>
-  <div class="income-container">
+  <div class="done-container">
     <span class="done-button"><button mat-mini-fab color="primary" (click)="completeUserSetUp(firstName.value, lastName.value, emailAddress.value, userName.value, income.value)"><i class="material-icons">done</i></button></span>
   </div>
 </div>
