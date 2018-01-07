@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { CacheService } from '../../../services/cache.service';
 import { User } from '../../../types/user-model';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-setup-user',
@@ -10,7 +11,14 @@ import { User } from '../../../types/user-model';
 })
 export class SetupUserComponent implements OnInit {
   public user: User;
-  public income: number;
+
+  emailValidation = new FormControl('', [Validators.required, Validators.email]);
+  firstNameValidation = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  lastNameValidation = new FormControl('', [Validators.required, Validators.minLength(1)]);
+  userNameValidation = new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(15)]);
+  incomeValidation = new FormControl('', [Validators.required, Validators.min(0)]);
+  
+  
 
   constructor(public cache: CacheService) { 
     this.user = new User();
@@ -29,13 +37,37 @@ export class SetupUserComponent implements OnInit {
 
     // navigate to step 2 of the budgeting processz
     //this.router.navigate['/budget-setup'];
-
     this.user.firstName = firstName;
     this.user.lastName = lastName;
     this.user.email = emailAddress;
     this.user.userName = userName;
     this.user.monthlyIncome = +amount;
     this.cache.user = this.user;
+  }
+
+  getEmailErrorMessage() {
+    return this.emailValidation.hasError('required') ? 'You must enter a value' :
+        this.emailValidation.hasError('email') ? 'Not a valid email' :
+            '';
+  }
+  getFirstNameErrorMessage() {
+    return this.firstNameValidation.hasError('required') ? 'You must enter a value' :
+        '';
+  }
+  getLastNameErrorMessage() {
+    return this.lastNameValidation.hasError('required') ? 'You must enter a value' :
+        '';
+  }
+  getUserNameErrorMessage() {
+    return this.userNameValidation.hasError('required') ? 'You must enter a value' :
+        this.userNameValidation.hasError('minlength') ? 'User Name must be at least 5 characters' :
+        this.userNameValidation.hasError('maxlength') ? 'User Name must not exceed 15 characters' :
+            '';
+  }
+  getIncomeErrorMessage() {
+    return this.incomeValidation.hasError('required') ? 'You must enter a value' :
+        this.incomeValidation.hasError('min') ? 'Income must be greater than or equal to 0' :
+            '';
   }
 
 }
