@@ -1,0 +1,13 @@
+<div class=setup-expenses-container>
+  <h2 class="header">Set up Expenses</h2>
+  <div class="expenses-list-container">
+    <mat-list>
+        <h3 mat-subheader>Expenses</h3>
+        <mat-list-item *ngFor="let key of keys">
+          <h4 mat-line>{{expenses[key].category.name}}</h4>
+          <p mat-line>{{expenses[key].name}}: ${{expenses[key].amount}} --- {{expenses[key].type.name}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+</div>

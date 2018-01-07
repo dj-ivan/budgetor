@@ -9,7 +9,6 @@ import { CacheService } from 'services/cache.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private router: Router, private _authService: AuthService) {
-    this._authService.init();
+  constructor(private router: Router) {
   }
 }
