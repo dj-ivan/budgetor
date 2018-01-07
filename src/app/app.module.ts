@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ReactiveFormsModule} from '@angular/forms';
+import { SetupUserComponent } from './budget-setup/setup-user/setup-user.component';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -66,7 +67,8 @@ import { SetupExpensesComponent } from './budget-setup/setup-expenses/setup-expe
     GoalsComponent,
     InputComponent,
     LoginComponent,
-    SetupExpensesComponent
+    SetupExpensesComponent,
+    SetupUserComponent
   ],
   imports: [
     BrowserAnimationsModule,

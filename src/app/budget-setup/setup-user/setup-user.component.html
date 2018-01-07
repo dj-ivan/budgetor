@@ -1,0 +1,42 @@
+<div class="welcome-container">
+  <div class="intro-text-container">
+    <h2 class="title">
+      CutBack
+    </h2>
+    <span class="line-after-heading"></span>
+    <p class="motto">
+      Let's start with you and your income.
+    </p>
+  </div>
+  <div class="firstName-container">
+    <mat-form-field class="input-container">
+      <input #firstName matInput placeholder="First Name" type="string" class="income-input"
+      required minlength="4" forbiddenName="bob">
+    </mat-form-field>
+  </div>
+  <div class="lastName-container">
+    <mat-form-field class="input-container">
+      <input #lastName matInput placeholder="Last Name" type="string" class="income-input">
+    </mat-form-field>
+ </div>
+ <div class="emailAddress-container">
+  <mat-form-field class="input-container">
+    <input #emailAddress matInput placeholder="Email Address" type="string" class="income-input">
+  </mat-form-field>
+</div>
+  <div class="userName-container">
+    <mat-form-field class="input-container">
+      <input #userName matInput placeholder="User Name" type="string" class="income-input">
+    </mat-form-field>
+ </div>
+  <div class="income-container">
+    <mat-form-field class="input-container">
+      <input #income matInput placeholder="Amount" type="number" class="income-input">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <div class="done-container">
+    <span class="done-button"><button mat-mini-fab color="primary" (click)="completeUserSetUp(firstName.value, lastName.value, emailAddress.value, userName.value, income.value)" routerLink="/expense-setup"><i class="material-icons">done</i></button></span>
+  </div>
+</div>
