@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { APP_ROUTES } from '../Routes/routes';
 import { BudgetSetupComponent } from './budget-setup/budget-setup.component';
-import { ExpensesComponent } from './budget-setup/expenses/expenses.component';
 import { GoalsComponent } from './goals/goals.component';
 import { InputComponent } from '../components/input/input.component';
 import { AngularFireModule } from 'angularfire2';
@@ -53,6 +52,8 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import { AuthService } from 'services/auth.service';
+import { CacheService } from '../services/cache.service';
+import { SetupExpensesComponent } from './budget-setup/setup-expenses/setup-expenses.component';
 
 @NgModule({
   declarations: [
@@ -62,23 +63,50 @@ import { AuthService } from 'services/auth.service';
     FooterComponent,
     WelcomeComponent,
     BudgetSetupComponent,
-    ExpensesComponent,
     GoalsComponent,
     InputComponent,
-    LoginComponent
+    LoginComponent,
+    SetupExpensesComponent
   ],
   imports: [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase, 'budgetor'),
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     AngularFireDatabaseModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
     RouterModule.forRoot(APP_ROUTES, { useHash: true })
   ],
   exports: [
@@ -112,9 +140,9 @@ import { AuthService } from 'services/auth.service';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule,
+    MatTooltipModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, CacheService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

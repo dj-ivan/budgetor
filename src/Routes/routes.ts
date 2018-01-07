@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { WelcomeComponent } from 'app/welcome/welcome.component';
 import { BudgetSetupComponent } from 'app/budget-setup/budget-setup.component';
 import { LoginComponent } from '../app/login/login.component';
+import { SetupExpensesComponent } from '../app/budget-setup/setup-expenses/setup-expenses.component';
 
 
 export const APP_ROUTES: Routes = [
