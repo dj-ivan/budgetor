@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 @import '../../styles/mixins/center.scss';
 
 .welcome-container {
   width: 100%;
-  height: 96vh;
+  height: 91vh;
   background: url('../../assets/pictures/homepageImage.jpg');
   background-position: bottom center;
   background-size: cover;
@@ -17,86 +18,29 @@
     .budget {
       font-size: 4rem;
       font-weight: bold;
-      border: 2px solid #fff;
+      border-bottom: 2px solid #f7f7f7;
+      border-top: 2px solid #f7f7f7;
       display: block;
       margin: 2rem auto 0 auto;
-      width: 80%;
+      width: 68%; 
     }
 
     .easy {
-      font-family: 'Permanent Marker', cursive;
+      font-family: 'Gloria Hallelujah', cursive;
       font-weight: lighter;
-      font-size: 3rem;
+      font-size: 2.4rem;
     }
   }
 
   .cta-button {
     width: 75%;
     border-radius: 6px;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     background: rgba(0, 137, 123, 0.4);
     margin: 3rem auto;
     padding: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #ffffff;
     text-align: center;
   }
 }
-
-
-
-// .welcome-container {
-//     width: 100%;
-//     height: 100%;
-//     color: white;
-//     margin-top: 6rem;
-//     margin: 0 auto;
-//     background: #283c86; /* fallback for old browsers */
-//     background: -webkit-linear-gradient(to right, #45a247, #283c86); /* Chrome 10-25, Safari 5.1-6 */
-//     background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-//     .intro-text-container {
-//         .title {
-//             text-align: center;
-//         }
-
-//         .motto {
-//             text-align: center;
-//         }
-
-//         .line-after-heading {
-//             width: 10rem;
-//             height: 1px;
-//             background: #fff;
-//             margin: 0 auto;
-//         }
-//     }
-
-//     .income-container {
-//         width: 50%;
-//         margin-left: 15vw;
-//         display: flex;
-
-//         .input-container {
-//             flex: 1;
-
-//             .income-input {
-//                 text-align: right;
-//             }
-
-//             input.income-input::-webkit-outer-spin-button,
-//             input.income-input::-webkit-inner-spin-button {
-//                 display: none;
-//             }
-
-//             input.income-input {
-//                 -moz-appearance: textfield;
-//             }
-//         }
-
-//         .done-button {
-//             flex: 1;
-//             margin: 0.5rem 5vw;
-//         }
-//     }
-// }
