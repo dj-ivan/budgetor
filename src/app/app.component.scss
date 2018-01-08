@@ -12,20 +12,21 @@
   /*Use max-width for better browser handling of small windows
   http://www.w3schools.com/css/css_max-width.asp
   */
-  max-width: 31.25rem;
+  // max-width: 31.25rem;
  
   /* Use min-width to prevent your design from being scrunched up in tiny viewports (and instead be replaced with horizontal scroll bars) 
   */
   min-width: $min-width;
    
   /* Add padding around your content - this is just an arbitrary number */
-  padding: 1rem;
+  // padding: 1rem;
  
  
   /* Add sufficient top padding so the fixed header doesn't cover up main content by defailt.  This value should be a calculated value (eg using calc(), sass, etc):
   padding for this container + height of app header; Here, that is 1em + 4em */ 
-  padding-top: 5rem;
+  padding-top: 4rem;
  
   /* just used to so we can tell the content block apart from the body block */
-  background-color: #26405a
+  background-color: #26405a;
+
 }

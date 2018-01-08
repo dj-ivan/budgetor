@@ -1,55 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+@import '../../styles/mixins/center.scss';
+
 .welcome-container {
-    color: white;
-    margin-top: 6rem;
-    margin: 0 auto;
+  width: 100%;
+  height: 91vh;
+  background: url('../../assets/pictures/homepageImage.jpg');
+  background-position: bottom center;
+  background-size: cover;
 
-    .intro-text-container {
-        .title {
-            text-align: center;
-        }
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 6rem;
+    color: #ffffff;
 
-        .motto {
-            text-align: center;
-        }
-
-        .line-after-heading {
-            content: "";
-            display: block;
-            background-color: #fff;
-            width: 10rem;
-            height: 2px;
-            margin-left: auto;
-            margin-right: auto;
-            left: 0;
-            right: 0;
-        }
+    .budget {
+      font-size: 4rem;
+      font-weight: bold;
+      border-bottom: 2px solid #f7f7f7;
+      border-top: 2px solid #f7f7f7;
+      display: block;
+      margin: 2rem auto 0 auto;
+      width: 68%; 
     }
 
-    .income-container {
-        width: 50%;
-        margin-left: 15vw;
-        display: flex;
-
-        .input-container {
-            flex: 1;
-
-            .income-input {
-                text-align: right;
-            }
-
-            input.income-input::-webkit-outer-spin-button,
-            input.income-input::-webkit-inner-spin-button {
-                display: none;
-            }
-
-            input.income-input {
-                -moz-appearance: textfield;
-            }
-        }
-
-        .done-button {
-            flex: 1;
-            margin: 0.5rem 5vw;
-        }
+    .easy {
+      font-family: 'Gloria Hallelujah', cursive;
+      font-weight: lighter;
+      font-size: 2.4rem;
     }
+  }
+
+  .cta-button {
+    width: 75%;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    background: rgba(0, 137, 123, 0.4);
+    margin: 3rem auto;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-align: center;
+  }
 }
